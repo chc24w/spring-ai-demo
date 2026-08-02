@@ -1,0 +1,157 @@
+{
+  "metadata" : {
+    "empty" : false,
+    "id" : "3e02af46-8f8b-4a74-b9c5-e28c1d9f8fe0",
+    "model" : "deepseek-v4-pro",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 1509,
+      "completionTokens" : 81,
+      "totalTokens" : 1590,
+      "nativeUsage" : {
+        "completion_tokens" : 81,
+        "prompt_tokens" : 1509,
+        "total_tokens" : 1590,
+        "prompt_tokens_details" : {
+          "cached_tokens" : 1408
+        }
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "finishReason" : "TOOL_CALLS",
+        "index" : 0,
+        "role" : "ASSISTANT",
+        "id" : "3e02af46-8f8b-4a74-b9c5-e28c1d9f8fe0",
+        "messageType" : "ASSISTANT"
+      },
+      "prefix" : null,
+      "reasoningContent" : "用户想要查询上海的天气。我可以使用maps_weather工具来查询。上海是一个城市，我直接使用城市名称查询即可。",
+      "text" : "好的，我马上帮您查询上海的天气。",
+      "toolCalls" : [ {
+        "id" : "call_00_YJ7ELP5tKegX8ZkTdWTl5633",
+        "type" : "function",
+        "name" : "maps_weather",
+        "arguments" : "{\"city\": \"上海\"}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "finishReason" : "TOOL_CALLS",
+        "index" : 0,
+        "role" : "ASSISTANT",
+        "id" : "3e02af46-8f8b-4a74-b9c5-e28c1d9f8fe0",
+        "messageType" : "ASSISTANT"
+      },
+      "prefix" : null,
+      "reasoningContent" : "用户想要查询上海的天气。我可以使用maps_weather工具来查询。上海是一个城市，我直接使用城市名称查询即可。",
+      "text" : "好的，我马上帮您查询上海的天气。",
+      "toolCalls" : [ {
+        "id" : "call_00_YJ7ELP5tKegX8ZkTdWTl5633",
+        "type" : "function",
+        "name" : "maps_weather",
+        "arguments" : "{\"city\": \"上海\"}"
+      } ]
+    }
+  } ]
+}
+2026-07-04 00:00:41.020 [http-nio-8080-exec-1]  DEBUG o.s.ai.chat.client.advisor.SimpleLoggerAdvisor 95: request: ChatClientRequest[prompt=Prompt{messages=[UserMessage{content='帮我查询上海的天气', metadata={messageType=USER}, messageType=USER}, DeepSeekAssistantMessage [messageType=ASSISTANT, toolCalls=[ToolCall[id=call_00_YJ7ELP5tKegX8ZkTdWTl5633, type=function, name=maps_weather, arguments={"city": "上海"}]], textContent=好的，我马上帮您查询上海的天气。, reasoningContent=用户想要查询上海的天气。我可以使用maps_weather工具来查询。上海是一个城市，我直接使用城市名称查询即可。, prefix=null, metadata={finishReason=TOOL_CALLS, index=0, role=ASSISTANT, id=3e02af46-8f8b-4a74-b9c5-e28c1d9f8fe0, messageType=ASSISTANT}], ToolResponseMessage{responses=[ToolResponse[id=call_00_YJ7ELP5tKegX8ZkTdWTl5633, name=maps_weather, responseData=[{"text":"{\n  \"city\": \"上海市\",\n  \"forecasts\": [\n    {\n      \"date\": \"2026-07-03\",\n      \"week\": \"5\",\n      \"dayweather\": \"中雨\",\n      \"nightweather\": \"阴\",\n      \"daytemp\": \"30\",\n      \"nighttemp\": \"25\",\n      \"daywind\": \"西\",\n      \"nightwind\": \"西\",\n      \"daypower\": \"1-3\",\n      \"nightpower\": \"1-3\",\n      \"daytemp_float\": \"30.0\",\n      \"nighttemp_float\": \"25.0\"\n    },\n    {\n      \"date\": \"2026-07-04\",\n      \"week\": \"6\",\n      \"dayweather\": \"中雨\",\n      \"nightweather\": \"小雨\",\n      \"daytemp\": \"34\",\n      \"nighttemp\": \"26\",\n      \"daywind\": \"西南\",\n      \"nightwind\": \"西南\",\n      \"daypower\": \"1-3\",\n      \"nightpower\": \"1-3\",\n      \"daytemp_float\": \"34.0\",\n      \"nighttemp_float\": \"26.0\"\n    },\n    {\n      \"date\": \"2026-07-05\",\n      \"week\": \"7\",\n      \"dayweather\": \"中雨\",\n      \"nightweather\": \"阴\",\n      \"daytemp\": \"31\",\n      \"nighttemp\": \"26\",\n      \"daywind\": \"西南\",\n      \"nightwind\": \"西南\",\n      \"daypower\": \"1-3\",\n      \"nightpower\": \"1-3\",\n      \"daytemp_float\": \"31.0\",\n      \"nighttemp_float\": \"26.0\"\n    },\n    {\n      \"date\": \"2026-07-06\",\n      \"week\": \"1\",\n      \"dayweather\": \"小雨\",\n      \"nightweather\": \"阴\",\n      \"daytemp\": \"33\",\n      \"nighttemp\": \"26\",\n      \"daywind\": \"西\",\n      \"nightwind\": \"西\",\n      \"daypower\": \"1-3\",\n      \"nightpower\": \"1-3\",\n      \"daytemp_float\": \"33.0\",\n      \"nighttemp_float\": \"26.0\"\n    }\n  ]\n}"}]]], messageType=TOOL, metadata={messageType=TOOL}}], modelOptions=org.springframework.ai.deepseek.DeepSeekChatOptions@5df7175f}, context={}]
+2026-07-04 00:00:44.651 [http-nio-8080-exec-1]  DEBUG o.s.ai.chat.client.advisor.SimpleLoggerAdvisor 101: response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "dae9c766-ea42-41e5-8b8b-f9f07afbf103",
+    "model" : "deepseek-v4-pro",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 2200,
+      "completionTokens" : 281,
+      "totalTokens" : 2481,
+      "nativeUsage" : {
+        "completion_tokens" : 281,
+        "prompt_tokens" : 2200,
+        "total_tokens" : 2481,
+        "prompt_tokens_details" : {
+          "cached_tokens" : 1536
+        }
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "finishReason" : "STOP",
+        "index" : 0,
+        "role" : "ASSISTANT",
+        "id" : "dae9c766-ea42-41e5-8b8b-f9f07afbf103",
+        "messageType" : "ASSISTANT"
+      },
+      "prefix" : null,
+      "reasoningContent" : "查询结果显示了上海的天气信息，包括今天（7月3日）和未来三天的天气预报。让我整理一下这些信息。",
+      "text" : "以下是**上海市**近期的天气预报：\n\n| 日期 | 星期 | 白天天气 | 夜间天气 | 白天温度 | 夜间温度 | 风向 | 风力 |\n|------|------|----------|----------|----------|----------|------|------|\n| 7月3日 | 周五 | 🌧 中雨 | ☁ 阴 | 30℃ | 25℃ | 西风 | 1-3级 |\n| 7月4日 | 周六 | 🌧 中雨 | 🌧 小雨 | 34℃ | 26℃ | 西南风 | 1-3级 |\n| 7月5日 | 周日 | 🌧 中雨 | ☁ 阴 | 31℃ | 26℃ | 西南风 | 1-3级 |\n| 7月6日 | 周一 | 🌧 小雨 | ☁ 阴 | 33℃ | 26℃ | 西风 | 1-3级 |\n\n📌 **温馨提示**：未来几天上海以阴雨天气为主，出门记得带好雨具。气温在25℃~34℃之间，体感较为闷热潮湿，建议穿着透气舒适的衣物。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "finishReason" : "STOP",
+        "index" : 0,
+        "role" : "ASSISTANT",
+        "id" : "dae9c766-ea42-41e5-8b8b-f9f07afbf103",
+        "messageType" : "ASSISTANT"
+      },
+      "prefix" : null,
+      "reasoningContent" : "查询结果显示了上海的天气信息，包括今天（7月3日）和未来三天的天气预报。让我整理一下这些信息。",
+      "text" : "以下是**上海市**近期的天气预报：\n\n| 日期 | 星期 | 白天天气 | 夜间天气 | 白天温度 | 夜间温度 | 风向 | 风力 |\n|------|------|----------|----------|----------|----------|------|------|\n| 7月3日 | 周五 | 🌧 中雨 | ☁ 阴 | 30℃ | 25℃ | 西风 | 1-3级 |\n| 7月4日 | 周六 | 🌧 中雨 | 🌧 小雨 | 34℃ | 26℃ | 西南风 | 1-3级 |\n| 7月5日 | 周日 | 🌧 中雨 | ☁ 阴 | 31℃ | 26℃ | 西南风 | 1-3级 |\n| 7月6日 | 周一 | 🌧 小雨 | ☁ 阴 | 33℃ | 26℃ | 西风 | 1-3级 |\n\n📌 **温馨提示**：未来几天上海以阴雨天气为主，出门记得带好雨具。气温在25℃~34℃之间，体感较为闷热潮湿，建议穿着透气舒适的衣物。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}

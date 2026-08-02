@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.chc.ai</groupId>
@@ -9,10 +9,6 @@
 
     <artifactId>ai01-model</artifactId>
     <name>ai01-model</name>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -38,15 +34,14 @@
             <artifactId>spring-ai-starter-model-deepseek</artifactId>
         </dependency>
         <!--spring ai 接入 ollama,步骤:
-       1.引入依赖
-       2.application.yml配置
-       3.调用参见 OllamaController-->
+        1.引入依赖
+        2.application.yml配置
+        3.调用参见 OllamaController-->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-ollama</artifactId>
         </dependency>
-        <!--如何访问没有内置starter的厂商模型，1、基于open API风格，2、基于Anthropic API风格-->
-        <!--spring ai 接入openai api风格的套用模型(如chatGPT或
+        <!--spring ai 接入openai api风格的模型(如chatGPT或
             其他厂商提供的兼容open api风格的模型,如deepseek),步骤:
             1.引入依赖
             2.application.yml配置

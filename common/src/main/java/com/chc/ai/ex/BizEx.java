@@ -1,6 +1,5 @@
 package com.chc.ai.ex;
 
-
 import com.chc.ai.enums.CodeEnum;
 import lombok.Getter;
 

@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.chc.ai</groupId>
@@ -9,9 +9,13 @@
 
   <name>spring-ai-demo</name>
   <modules>
-    <module>common</module>
     <module>ai01-model</module>
-      <module>ai02-model</module>
+    <module>common</module>
+    <module>ai02-model2</module>
+    <module>ai03-chatClient</module>
+    <module>ai04-tools</module>
+    <module>ai05-rag</module>
+    <module>ai06-mcp</module>
   </modules>
 
   <properties>
@@ -21,7 +25,7 @@
   </properties>
   <dependencyManagement>
     <dependencies>
-      <dependency><!--springboot 4.1.0-->
+      <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>4.1.0</version>
@@ -36,10 +40,10 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <dependency><!--common公共包-->
+      <dependency>
         <groupId>com.chc.ai</groupId>
         <artifactId>common</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${project.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

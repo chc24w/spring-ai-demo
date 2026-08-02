@@ -1,0 +1,28 @@
+spring:
+  ai:
+    dashscope:
+      api-key: ${BAILIAN_API_KEY}
+      chat:
+        api-key: ${BAILIAN_API_KEY}
+        options:
+          model: qwen3.7-plus
+      image:
+        api-key: ${BAILIAN_API_KEY}
+        options:
+          model: wanx2.1-t2i-turbo
+        # 获取工作空间: https://help.aliyun.com/zh/model-studio/obtain-the-app-id-and-workspace-id#d3eb3cd37b7fu
+        # 万相文生图api文档: https://bailian.console.aliyun.com/cn-beijing?tab=api#/api/?type=model&url=2862677
+        # https://{workspace-id}.cn-beijing.maas.aliyuncs.com
+        base-url: https://ws-0bmy5n4di57823ym.cn-beijing.maas.aliyuncs.com
+      audio:
+        # tts配置,语音合成
+        speech:
+          options:
+            # api文档: https://help.aliyun.com/zh/model-studio/cosyvoice-tts-http-api
+            model: cosyvoice-v3-plus
+        # 语音识别
+        transcription:
+          options:
+            # Automatic Speech Recognition
+            model: fun-asr
+          base-url: https://ws-0bmy5n4di57823ym.cn-beijing.maas.aliyuncs.com

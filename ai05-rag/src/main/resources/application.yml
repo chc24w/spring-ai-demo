@@ -1,0 +1,25 @@
+spring:
+  ai:
+    # 配置向量db
+    vectorstore:
+      qdrant:
+        collection-name: test_rag
+        host: localhost
+        port: 6334
+    dashscope:
+      api-key: ${BAILIAN_API_KEY}
+      chat:
+        api-key: ${BAILIAN_API_KEY}
+        options:
+          model: qwen3.7-plus
+          # 多模态模型需要指定为true
+          multi-model: true
+      embedding:
+        options:
+          model: text-embedding-v4
+          # 维度大小
+          dimensions: 1024
+      rerank:
+        api-key: ${BAILIAN_API_KEY}
+        options:
+          model: gte-rerank-v2

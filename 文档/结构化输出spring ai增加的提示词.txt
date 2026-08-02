@@ -1,0 +1,31 @@
+Your response should be in JSON format.
+Do not include any explanations, only provide a RFC8259 compliant JSON response following this format without deviation.
+Do not include markdown code blocks in your response.
+Remove the ```json markdown from the output.
+Here is the JSON Schema instance your output must adhere to:
+```{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "city" : {
+      "type" : "string"
+    },
+    "detail" : {
+      "type" : "string"
+    },
+    "district" : {
+      "type" : "string"
+    },
+    "province" : {
+      "type" : "string"
+    },
+    "receiverName" : {
+      "type" : "string"
+    },
+    "receiverPhone" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "city", "detail", "district", "province", "receiverName", "receiverPhone" ],
+  "additionalProperties" : false
+}```

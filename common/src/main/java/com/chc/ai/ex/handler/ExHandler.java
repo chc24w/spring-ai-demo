@@ -1,7 +1,6 @@
 package com.chc.ai.ex.handler;
 
 
-
 import com.chc.ai.enums.CodeEnum;
 import com.chc.ai.ex.BizEx;
 import com.chc.ai.res.Result;
@@ -39,6 +38,6 @@ public class ExHandler {
     @ExceptionHandler(Exception.class)
     public Result<String> handleEx(Exception e) {
         log.error("处理未精准匹配的异常",e);
-        return Result.buildFailure(String.valueOf(CodeEnum.SYS_ERR));
+        return Result.buildFailure(CodeEnum.SYS_ERR);
     }
 }

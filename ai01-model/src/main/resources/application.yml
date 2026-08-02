@@ -11,10 +11,10 @@ spring:
     # ollama配置
     ollama:
       # 默认http://localhost:11434
-      base-url: http://localhost:11434
+      base-url: http://192.168.10.200:11434
       chat:
         # 你在ollama上运行的模型名字
-        model: deepseek-r1
+        model: qwen3:4b
     openai:
       api-key: ${DEEPSEEK_API_KEY}
       chat:
